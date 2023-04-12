@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/janse-portfolio/static/css/main.abf42dcf.css",
-    "main.js": "/janse-portfolio/static/js/main.34f779a3.js",
+    "main.css": "/janse-portfolio/static/css/main.21c45442.css",
+    "main.js": "/janse-portfolio/static/js/main.f422f027.js",
     "static/js/787.36099695.chunk.js": "/janse-portfolio/static/js/787.36099695.chunk.js",
     "static/media/Microcrm.png": "/janse-portfolio/static/media/Microcrm.3c0eac77f9d24d91a9d3.png",
     "static/media/portfolio.png": "/janse-portfolio/static/media/portfolio.c6bb228d151d7526ba55.png",
@@ -20,12 +20,12 @@
     "static/media/apollogql.svg": "/janse-portfolio/static/media/apollogql.8d9301968cec44deddbaed50a433391e.svg",
     "static/media/bars_icon.svg": "/janse-portfolio/static/media/bars_icon.9355abaa66459025e8cfff9ce16671e8.svg",
     "static/media/html.svg": "/janse-portfolio/static/media/html.ff855cf579cde2134d35daaad3f12cac.svg",
-    "main.abf42dcf.css.map": "/janse-portfolio/static/css/main.abf42dcf.css.map",
-    "main.34f779a3.js.map": "/janse-portfolio/static/js/main.34f779a3.js.map",
+    "main.21c45442.css.map": "/janse-portfolio/static/css/main.21c45442.css.map",
+    "main.f422f027.js.map": "/janse-portfolio/static/js/main.f422f027.js.map",
     "787.36099695.chunk.js.map": "/janse-portfolio/static/js/787.36099695.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.abf42dcf.css",
-    "static/js/main.34f779a3.js"
+    "static/css/main.21c45442.css",
+    "static/js/main.f422f027.js"
   ]
 }
