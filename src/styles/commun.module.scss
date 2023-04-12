@@ -1,0 +1,14 @@
+@import 'variables.scss';
+.liLink{
+    cursor: pointer;
+    color: $link;
+}
+
+.liLink:hover{
+    color: $primary-color;
+}
+
+
+:export {
+    primaryColor : $primary-color;
+   }

@@ -1,0 +1,58 @@
+@import '../../styles/variables.scss';
+
+.ulList {
+  list-style: none;
+  padding-left: 0;    
+  border-radius: 27px;
+  padding: 11px;
+  width: 60px;
+  position: fixed;
+  bottom: 0;
+  right: auto;
+  z-index: 10;
+  padding-left: 13px;  
+  bottom: 35%;
+  width: 80px;
+  left: 0%;
+
+  @media only screen and (max-width: 1100px) {
+    width: 160px;   
+    height: 65px;
+    display: flex;
+    bottom: 0;
+    left: 33%;
+    border: solid;
+    li{
+      width: 180px;
+    }
+    
+  }
+
+  height: 211px;
+  backdrop-filter: blur(10px);
+
+  svg {
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  li {
+    transition: 0.7s;
+  }
+  svg path {
+    fill: transparent;
+  }
+
+  li:hover {
+    transform: scale(1.5);
+    transition: 0.2s;
+
+    svg:hover path {
+      stroke: $primary-color;
+    }
+
+    svg circle {
+      stroke: $primary-color;
+    }
+  }
+}

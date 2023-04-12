@@ -1,0 +1,17 @@
+@import '../../styles/variables.scss';
+
+.logoConainer{
+    width: 100%;
+    height: 100%;   
+    position: fixed;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+    background: #2900158f;
+    backdrop-filter: blur(10px);
+
+     img{
+        width: 230px
+     }   
+}

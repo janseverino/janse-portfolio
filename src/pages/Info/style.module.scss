@@ -1,0 +1,26 @@
+@import "../../styles/variables.scss";
+
+.bigHeading {
+  margin: 0px;
+  font-size: clamp(40px, 8vw, 80px);
+}
+
+.container {
+  div {
+    backdrop-filter: blur(7px);
+  }
+  h3 {
+    margin-top: 5px;
+    line-height: 0.9;
+    font-size: clamp(20px, 8vw, 30px);
+  }
+
+  h2 {
+    color: $primary-color;
+  }
+
+  p {
+    margin: 20px 0px 0px;
+    max-width: 540px;
+  }
+}

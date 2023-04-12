@@ -1,0 +1,26 @@
+@import "../../styles/variables.scss";
+
+.container {
+  backdrop-filter: blur(4px);
+  a{
+    color: $primary-color
+  }
+  
+  a:hover{
+    text-decoration: underline;
+  }
+}
+
+.skillsList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 220px));
+}
+
+.current {
+  color: #4caf50;
+}
+
+.descriptionWork {
+  text-align: justify;
+  max-width: 900px;
+}

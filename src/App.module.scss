@@ -1,0 +1,33 @@
+@import './styles/variables.scss';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Genos',
+    sans-serif;
+  background: radial-gradient(ellipse at bottom, $radio-background-color 0%, $ext-radio-background-color 100%);
+  min-height: 100vh;
+  color: $font-color; 
+  
+  font-size: 25px;
+}
+   
+a:link {
+  text-decoration: none;
+   color: $link;
+}
+
+a:visited {
+  text-decoration: none;
+   color: $link_visited
+}
+
+
+a:hover {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+a:active {
+  text-decoration: none;
+}
+

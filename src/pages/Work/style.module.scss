@@ -1,0 +1,69 @@
+@import '../../styles/variables.scss';
+.container{   
+    margin-bottom: 90px;
+}
+
+.flex{
+    display: flex;  
+}
+     
+.imageContainer{
+    width: 100%;
+}
+
+.imageBox{
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.projectContainer{
+
+    width: 50%;
+    text-align: right;
+    padding-top: 55px;
+}
+
+.descriptionContainer{
+    margin-left: -198px;
+    background: rgba(114, 25, 75, 0.8117647059);
+    text-align: left;
+    padding: 18px;
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    box-shadow: 1px 1px 13px -7px;
+    transition: 0.2s;
+    p{
+        max-width: 500px;
+    }
+}
+ 
+.container:hover .descriptionContainer{
+    margin-left: -220px;
+    margin-top: -10px;
+    transition: 0.4s;
+}
+.container:hover .imageBox{
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.skillsList{
+    display: flex;
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
+
+    li{
+        border: solid 1px $primary-color;
+        margin-right: 10px;
+        padding: 0px 11px;
+        border-radius: 10px;
+        color: $primary-color;
+        white-space: nowrap;
+    }
+}

@@ -1,24 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import st from "./App.module.scss";
+import Background from "./components/Background/Backgroung";
+import Header from "./components/Header/Header";
+import { BrowserRouter } from "react-router-dom";
+import Main from "./pages/Main";
+import SocialList from "./components/SocialList/SocialList";
+import RightAsideBar from "./components/RightAsideBar/RightAsideBar";
+import WelcomeLoading from "./components/WelcomeLoading/WelcomeLoading";
 
 function App() {
+  const [openDrawer, setOpenDrawer] = useState<boolean>(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <WelcomeLoading />
+      <React.StrictMode>
+        <BrowserRouter>
+          <Background />
+          <Header onOpenMenu={() => setOpenDrawer(true)} />
+          <div className={st.socialListContent}></div>
+          <SocialList />
+          <RightAsideBar
+            onClose={() => setOpenDrawer(false)}
+            open={openDrawer}
+          />
+          <Main />
+        </BrowserRouter>
+      </React.StrictMode>
     </div>
   );
 }

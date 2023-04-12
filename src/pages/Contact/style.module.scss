@@ -1,0 +1,28 @@
+@import '../../styles/variables.scss';
+
+.button{
+    background-color: $primary-color;
+}
+
+.emailSentLabel {
+    color: #4CAF50;
+    background: #4caf503b;
+    border: solid;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close{
+    color: white;
+    background: #de4338;
+    padding: 0px 8px;
+    border-radius: 21px;
+    float: right;
+    font-size: 19px;
+    margin: 7px 4px 5px 4px;
+}
+
+.close:hover{
+    cursor: pointer;
+}
+
