@@ -4,6 +4,7 @@ import {
   isValidElement,
   ReactNode,
   SyntheticEvent,
+  useEffect,
   useState,
 } from "react";
 import { styled } from "@mui/material/styles";
@@ -21,10 +22,11 @@ const MUITabsProps = {
     maxWidth: 40,
     width: "100%",
     backgroundColor: "#635ee7",
-  },
+  }  
 };
 
 interface TabsProps {
+  isFlex: boolean;
   children?: ReactNode;
   value: number;
   onChange: (event: SyntheticEvent, newValue: number) => void;
@@ -33,7 +35,8 @@ interface TabsProps {
 const TabsComponent = styled((props: TabsProps) => (
   <Tabs
     {...props}
-    orientation='vertical'
+    style={{overflow:"visible"}}
+    orientation={props.isFlex ? 'vertical' : 'horizontal'}
     variant='scrollable'
     TabIndicatorProps={{ children: <span className='MuiTabs-indicatorSpan' /> }}
   />
@@ -49,7 +52,22 @@ export default function CustomizedTabs({
   columns,
 }: CustomizedTabsProps) {
   const [value, setValue] = useState<number>(0);
+  const [isFlex, setIsFlex] = useState<boolean>(true);
   const tabsContentChildren = Children.toArray(children);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      if(window.innerWidth < 500) setIsFlex (false)
+      else setIsFlex(true)
+      console.log(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
 
   const handleChange = (event: SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -61,9 +79,12 @@ export default function CustomizedTabs({
 
   return (
     <>
-      <Box sx={{ display: "flex" }}>
+      <Box 
+        sx={{ display: isFlex ? "flex" : "" }}
+      >
         <TabsComponent
           value={value}
+          isFlex={isFlex}
           onChange={handleChange}
           aria-label='styled tabs example'>
           {columns.map((item) => (
