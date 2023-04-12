@@ -52,7 +52,7 @@ export default function CustomizedTabs({
   columns,
 }: CustomizedTabsProps) {
   const [value, setValue] = useState<number>(0);
-  const [isFlex, setIsFlex] = useState<boolean>(true);
+  const [isFlex, setIsFlex] = useState<boolean>(window.innerWidth > 500);
   const tabsContentChildren = Children.toArray(children);
 
   useEffect(() => {
